@@ -5,9 +5,46 @@
     <link>https://xdaemonx.github.io/tags/</link>
     <description>Recent content in Tags on dylib blog</description>
     <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Fri, 03 Jul 2020 13:44:28 +0200</lastBuildDate>
     
 	<atom:link href="https://xdaemonx.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>debugging</title>
+      <link>https://xdaemonx.github.io/tags/debugging/</link>
+      <pubDate>Fri, 03 Jul 2020 13:44:28 +0200</pubDate>
+      
+      <guid>https://xdaemonx.github.io/tags/debugging/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>debugserver</title>
+      <link>https://xdaemonx.github.io/tags/debugserver/</link>
+      <pubDate>Fri, 03 Jul 2020 13:44:28 +0200</pubDate>
+      
+      <guid>https://xdaemonx.github.io/tags/debugserver/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>iPhone</title>
+      <link>https://xdaemonx.github.io/tags/iphone/</link>
+      <pubDate>Fri, 03 Jul 2020 13:44:28 +0200</pubDate>
+      
+      <guid>https://xdaemonx.github.io/tags/iphone/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>lldb</title>
+      <link>https://xdaemonx.github.io/tags/lldb/</link>
+      <pubDate>Fri, 03 Jul 2020 13:44:28 +0200</pubDate>
+      
+      <guid>https://xdaemonx.github.io/tags/lldb/</guid>
+      <description></description>
+    </item>
     
   </channel>
 </rss>

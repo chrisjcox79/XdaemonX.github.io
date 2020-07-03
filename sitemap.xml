@@ -3,15 +3,62 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://xdaemonx.github.io/categories/</loc>
+    <loc>https://xdaemonx.github.io/tags/debugging/</loc>
+    <lastmod>2020-07-03T13:44:28+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://xdaemonx.github.io/debugging/</loc>
+    <lastmod>2020-07-03T13:44:28+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://xdaemonx.github.io/tags/debugserver/</loc>
+    <lastmod>2020-07-03T13:44:28+02:00</lastmod>
   </url>
   
   <url>
     <loc>https://xdaemonx.github.io/</loc>
+    <lastmod>2020-07-03T13:44:28+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://xdaemonx.github.io/tags/iphone/</loc>
+    <lastmod>2020-07-03T13:44:28+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://xdaemonx.github.io/tags/lldb/</loc>
+    <lastmod>2020-07-03T13:44:28+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://xdaemonx.github.io/post/</loc>
+    <lastmod>2020-07-03T13:44:28+02:00</lastmod>
   </url>
   
   <url>
     <loc>https://xdaemonx.github.io/tags/</loc>
+    <lastmod>2020-07-03T13:44:28+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://xdaemonx.github.io/page/about/</loc>
+    <lastmod>2015-04-03T02:13:50+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://xdaemonx.github.io/page/contact/</loc>
+    <lastmod>2015-04-03T02:13:50+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://xdaemonx.github.io/page/</loc>
+    <lastmod>2015-04-03T02:13:50+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://xdaemonx.github.io/categories/</loc>
   </url>
   
 </urlset>
