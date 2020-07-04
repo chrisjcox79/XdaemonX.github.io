@@ -5,10 +5,21 @@
     <link>https://xdaemonx.github.io/</link>
     <description>Recent content on dylib blog</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Fri, 03 Jul 2020 13:44:28 +0200</lastBuildDate>
+    <lastBuildDate>Fri, 03 Jul 2020 17:28:54 +0200</lastBuildDate>
     
 	<atom:link href="https://xdaemonx.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Connecting the dots between Theos and Cycript/Cyrun</title>
+      <link>https://xdaemonx.github.io/theos_cycript_cyrun/</link>
+      <pubDate>Fri, 03 Jul 2020 17:28:54 +0200</pubDate>
+      
+      <guid>https://xdaemonx.github.io/theos_cycript_cyrun/</guid>
+      <description>We have all been playing with cycript and changing those labels or perhaps we hid some views but we did not see the bigger picture of all of it, and the biggest question of them all is how it is related to class-dump and theos. To make things clear, im gonna take local news app.
+Theos Lets take definition from iphonedevwiki which says:
+ Theos is a cross-platform suite of development tools for managing, developing, and deploying iOS software without the use of Xcode.</description>
+    </item>
     
     <item>
       <title>Debugging iOS apps on jailbroken iPhone</title>
@@ -19,15 +30,6 @@
       <description>The first time I have tried to debug iOS apps on my jailbroken iPhone I hit the wall. There were many issues I had to solve so in this short post I&amp;rsquo;m gonna try to help you with this. Since you came to this post, I believe you already know what is lldb so I won&amp;rsquo;t talk about it and let&amp;rsquo;s get straight to the point.
 Prerequisites:
  Jailbroken iPhone (mine is iPhone 11, 13.</description>
-    </item>
-    
-    <item>
-      <title>About</title>
-      <link>https://xdaemonx.github.io/page/about/</link>
-      <pubDate>Fri, 03 Apr 2015 02:13:50 +0000</pubDate>
-      
-      <guid>https://xdaemonx.github.io/page/about/</guid>
-      <description>About Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean nec dolor in magna lobortis egestas. Suspendisse eu erat tempor, tristique neque eu, convallis nulla. Curabitur vel bibendum lacus, at semper mauris. Suspendisse aliquet commodo ex, sed sagittis metus aliquam id. Maecenas feugiat rutrum lorem vel imperdiet. Nullam ornare lectus ut enim finibus, et porttitor mi tincidunt. Aenean lacinia, leo quis vehicula eleifend, quam libero sagittis erat, at euismod augue mauris et sapien.</description>
     </item>
     
     <item>

@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Posts on dylib blog</title>
-    <link>https://xdaemonx.github.io/post/</link>
-    <description>Recent content in Posts on dylib blog</description>
+    <title>cycript on dylib blog</title>
+    <link>https://xdaemonx.github.io/tags/cycript/</link>
+    <description>Recent content in cycript on dylib blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <lastBuildDate>Fri, 03 Jul 2020 17:28:54 +0200</lastBuildDate>
     
-	<atom:link href="https://xdaemonx.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://xdaemonx.github.io/tags/cycript/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
@@ -19,17 +19,6 @@
       <description>We have all been playing with cycript and changing those labels or perhaps we hid some views but we did not see the bigger picture of all of it, and the biggest question of them all is how it is related to class-dump and theos. To make things clear, im gonna take local news app.
 Theos Lets take definition from iphonedevwiki which says:
  Theos is a cross-platform suite of development tools for managing, developing, and deploying iOS software without the use of Xcode.</description>
-    </item>
-    
-    <item>
-      <title>Debugging iOS apps on jailbroken iPhone</title>
-      <link>https://xdaemonx.github.io/debugging/</link>
-      <pubDate>Fri, 03 Jul 2020 13:44:28 +0200</pubDate>
-      
-      <guid>https://xdaemonx.github.io/debugging/</guid>
-      <description>The first time I have tried to debug iOS apps on my jailbroken iPhone I hit the wall. There were many issues I had to solve so in this short post I&amp;rsquo;m gonna try to help you with this. Since you came to this post, I believe you already know what is lldb so I won&amp;rsquo;t talk about it and let&amp;rsquo;s get straight to the point.
-Prerequisites:
- Jailbroken iPhone (mine is iPhone 11, 13.</description>
     </item>
     
   </channel>
