@@ -3,17 +3,17 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Connecting the dots between Theos and Cycript/Cyrun &middot; </title>
-        <meta name="description" content="What is the releationship between the two">
+        <title>Fun RCE with PHP upload &middot; </title>
+        <meta name="description" content="500 Internal Error sometimes can be good">
         <meta name="HandheldFriendly" content="True">
         <meta name="MobileOptimized" content="320">
         <meta name="generator" content="Hugo 0.65.0" />
         <meta name="robots" content="index,follow">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta property="og:title" content="Connecting the dots between Theos and Cycript/Cyrun">
-<meta property="og:description" content="What is the releationship between the two">
+        <meta property="og:title" content="Fun RCE with PHP upload">
+<meta property="og:description" content="500 Internal Error sometimes can be good">
 <meta property="og:type" content="article">
-<meta property="og:url" content="https://xdaemonx.github.io/theos_cycript_cyrun/">
+<meta property="og:url" content="https://xdaemonx.github.io/rce/">
         <link rel="stylesheet" href="https://xdaemonx.github.io/dist/site.css">
         <link rel="stylesheet" href="https://xdaemonx.github.io/dist/syntax.css">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,400,600,700,300&subset=latin,cyrillic-ext,latin-ext,cyrillic">
@@ -65,12 +65,12 @@
 <div class="container">
     <article class="post-container" itemscope="" itemtype="http://schema.org/BlogPosting">
         <header class="post-header">
-    <h1 class="post-title" itemprop="name headline">Connecting the dots between Theos and Cycript/Cyrun</h1>
+    <h1 class="post-title" itemprop="name headline">Fun RCE with PHP upload</h1>
     
-        <p class="post-description" itemprop="description">What is the releationship between the two</p>
+        <p class="post-description" itemprop="description">500 Internal Error sometimes can be good</p>
     
     <p class="post-date post-line">
-        <span>Published <time datetime="2020-07-03" itemprop="datePublished">Fri, Jul 3, 2020</time></span>
+        <span>Published <time datetime="2020-08-17" itemprop="datePublished">Mon, Aug 17, 2020</time></span>
         <span>by</span>
         <span itemscope="" itemprop="author" itemtype="https://schema.org/Person">
             <span itemprop="name">
@@ -84,22 +84,32 @@
         <div class="post-content clearfix" itemprop="articleBody">
     
 
-    <p>We have all been playing with cycript and changing those labels or perhaps we hid some views but we did not see the bigger picture of all of it, and the biggest question of them all is how it is related to <strong>class-dump</strong> and <strong>theos</strong>. To make things clear, im gonna take local news app.</p>
-<h2 id="theos">Theos</h2>
-<p>Lets take definition from <a href="http://iphonedevwiki.net/index.php/Theos">iphonedevwiki</a> which says:</p>
-<blockquote>
-<p>Theos is a cross-platform suite of development tools for managing, developing, and deploying iOS software without the use of Xcode.</p>
-</blockquote>
-<p>What this means is that you can override certain app funcionality, extend it or remove it completely. Result of theos is called <em>tweak</em>. Let&rsquo;s say you have a functionality in app which shows advertisements, you could make a theos tweak (override method) not to show those advertisements.</p>
-<h2 id="class-dump">Class-dump</h2>
-<p>Class-dump tool or alternative version class-dump-z which is faster is basically what its name says. It allows you to dump all classes as well as their methods inside the specific app binary. I like to install it on my Mac and run everything from there because it is easier for me. The first thing I do is dump application using tools like <strong>frida-ios-dump</strong> or <strong>Clutch</strong>, extract the <em>.ipa</em> file and run the class-dump against the binary.</p>
-<p>Let&rsquo;s say app&rsquo;s binary is called <em>NotMe</em>, good combination of flags would be:<br>
-<code>$ class-dump -S -s -H NotMe -o /tmp/NotMeHeaders</code></p>
-<p>Run <code>class-dump --help</code> to see what each options means.</p>
-<h2 id="cycript-or-cyrun-what-the-hell">Cycript or cyrun, what the hell</h2>
-<p>The name of the original tool is called <strong>cycript</strong> which was made by saurik himself. On certain versions of jailbreak cycript does not work, and there is alternative called <em>cyrun</em>.</p>
-<p>Cycript enables you to attach to the application and inspect it in runtime. You can view all those views, labels, textfields etc. You can manipulate those elements however you want according to ObjC rules. Cycript is also useful to find which view controller is responsible for certain element, or which methods gets called on let&rsquo;s say button click.</p>
-<h2 id="connecting-everything">Connecting everything</h2>
+    <h2 id="introduction">Introduction</h2>
+<p>I know this is not about MacOS nor iOS but this was something that had to be written.</p>
+<p>Recently I had a web application penetration test on which I have found CSV injection and a great example of bypassing PHP image upload. Users with admin privileges had an option to change user&rsquo;s profile picture which immediately caught my eye.</p>
+<h2 id="app-details">App details</h2>
+<ul>
+<li>Fictional hostname: example.com</li>
+<li>Language: PHP</li>
+<li>Framework: Laravel</li>
+</ul>
+<h2 id="analysis">Analysis</h2>
+<p>After messing around with trying to upload some php shell I was constantly getting 500 Internal Server Error which was kinda a clue to me that application is not allowing anything besides good ol&rsquo; images.</p>
+<p>Application is storing images on the server by generating random id and combining it with file extension. It gets stored at <strong><a href="http://example.com/images/users/ID.EXTENSION">http://example.com/images/users/ID.EXTENSION</a></strong>.</p>
+<p>Example: <strong><a href="http://example.com/images/users/1191723995f3a343b45e2d9.82154619.jpg">http://example.com/images/users/1191723995f3a343b45e2d9.82154619.jpg</a></strong></p>
+<h2 id="attack">Attack</h2>
+<p>I first have tried to upload php file and change its filename to name.gif.php and embeding some PHP code without success. File gets uploaded as php but without execution which can be seen on following image.</p>
+<p><img src="/img/burp_rce.png" alt="Request with GIF87a;"></p>
+<p>After inspecting elements, I saw that file got saved as <strong>864064135f3a686e303ab8.04907479.php</strong>, after checking with browser the location I saw only GIF87a; on the page.</p>
+<p><img src="/img/first_try.png" alt="Output of image"></p>
+<p>The thing which caught my attention was 500 Internal Server Error even though the file got uploaded.</p>
+<p>The next thing i have tried is removing completely <em>GIF87a;</em>, changing mime type to <strong>application/x-httpd-php</strong> and filename just to <strong>.gif.php</strong>. Application stripped .gif and saved php file, inspecting the element and checking the URL I saw that PHP file really got executed. Once again I got 500 Internal Server Error but the file got uploaded so I didn&rsquo;t really care.</p>
+<p><img src="/img/execution.png" alt="Sending payload"></p>
+<p><img src="/img/php_execution.png" alt="Execution"></p>
+<p>Changing the body to <code>&lt;?php system($_GET[&quot;cmd&quot;]); ?&gt;</code>, uploading the file, getting the URL I have proceeded to get file <strong>/etc/passwd/</strong> with success and it is game over.</p>
+<p><img src="/img/passwd.png" alt="Output of /etc/passwd file"></p>
+<h2 id="point-of-the-post">Point of the post</h2>
+<p>Do not get discouraged if you get internal server error, try to mess around and play with everything you see. You never know what the application is doing when you are blackboxing.</p>
 
 </div>
 
@@ -109,18 +119,18 @@
             <span>Tagged:</span>
             
             
-                <a href="/tags/theos/">theos</a>, 
+                <a href="/tags/webapp/">webapp</a>, 
             
-                <a href="/tags/cycript/">cycript</a>, 
+                <a href="/tags/rce/">rce</a>, 
             
-                <a href="/tags/cyrun/">cyrun</a>
+                <a href="/tags/php/">php</a>
             
         </p>
     
 
     <div class="share">
         
-            <a class="icon-twitter" href="https://twitter.com/share?text=Connecting%20the%20dots%20between%20Theos%20and%20Cycript%2fCyrun&url=https%3a%2f%2fxdaemonx.github.io%2ftheos_cycript_cyrun%2f"
+            <a class="icon-twitter" href="https://twitter.com/share?text=Fun%20RCE%20with%20PHP%20upload&url=https%3a%2f%2fxdaemonx.github.io%2frce%2f"
                 onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
                 <i class="fa fa-twitter"></i>
                 <span class="hidden">Twitter</span>
@@ -128,7 +138,7 @@
         
 
         
-            <a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fxdaemonx.github.io%2ftheos_cycript_cyrun%2f"
+            <a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fxdaemonx.github.io%2frce%2f"
                 onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
                 <i class="fa fa-facebook"></i>
                 <span class="hidden">Facebook</span>
@@ -136,7 +146,7 @@
         
 
         
-            <a class="icon-google-plus" href="https://plus.google.com/share?url=https%3a%2f%2fxdaemonx.github.io%2ftheos_cycript_cyrun%2f"
+            <a class="icon-google-plus" href="https://plus.google.com/share?url=https%3a%2f%2fxdaemonx.github.io%2frce%2f"
               onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
               <i class="fa fa-google-plus"></i>
                 <span class="hidden">Google+</span>
