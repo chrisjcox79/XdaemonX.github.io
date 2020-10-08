@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>phishing on del0rean blog</title>
+    <link>https://xdaemonx.github.io/tags/phishing/</link>
+    <description>Recent content in phishing on del0rean blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Thu, 08 Oct 2020 14:54:09 +0200</lastBuildDate>
+    
+	<atom:link href="https://xdaemonx.github.io/tags/phishing/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Modlishka &amp; Lateralus</title>
+      <link>https://xdaemonx.github.io/lateralus/</link>
+      <pubDate>Thu, 08 Oct 2020 14:54:09 +0200</pubDate>
+      
+      <guid>https://xdaemonx.github.io/lateralus/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
