@@ -21,17 +21,6 @@
     
     <item>
       <title>Fun RCE with PHP upload</title>
-      <link>https://xdaemonx.github.io/modlishka_lateralus/</link>
-      <pubDate>Mon, 17 Aug 2020 13:09:06 +0200</pubDate>
-      
-      <guid>https://xdaemonx.github.io/modlishka_lateralus/</guid>
-      <description>Introduction I know this is not about MacOS nor iOS but this was something that had to be written.
-Recently I had a web application penetration test on which I have found CSV injection and a great example of bypassing PHP image upload. Users with admin privileges had an option to change user&amp;rsquo;s profile picture which immediately caught my eye.
-App details  Fictional hostname: example.com Language: PHP Framework: Laravel  Analysis After messing around with trying to upload some php shell I was constantly getting 500 Internal Server Error which was kinda a clue to me that application is not allowing anything besides good ol&amp;rsquo; images.</description>
-    </item>
-    
-    <item>
-      <title>Fun RCE with PHP upload</title>
       <link>https://xdaemonx.github.io/rce/</link>
       <pubDate>Mon, 17 Aug 2020 13:09:06 +0200</pubDate>
       
