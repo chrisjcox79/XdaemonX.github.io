@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>iPhone on del0rean blog</title>
-    <link>https://xdaemonx.github.io/tags/iphone/</link>
-    <description>Recent content in iPhone on del0rean blog</description>
+    <title>frida on del0rean blog</title>
+    <link>https://xdaemonx.github.io/tags/frida/</link>
+    <description>Recent content in frida on del0rean blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <lastBuildDate>Sat, 05 Dec 2020 22:31:11 +0100</lastBuildDate>
     
-	<atom:link href="https://xdaemonx.github.io/tags/iphone/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://xdaemonx.github.io/tags/frida/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
@@ -19,17 +19,6 @@
       <description>Introduction After trying for 7.30 hours to insert FridaGadget into the application, I have finally did it. It took reading bunch of tutorials and trials until it all clicked.
 Anyway, FridaGadget allows us instrumentation (lets say hacking) of an application on non jailbroken iPhone. I was using my iPhone which is running iOS 14.0.1.
 Prerequisities  Frida Gadget insert_dylib applesign ios-deploy Frida  Preparation The first thing you need it to get provisioning profile, or let&amp;rsquo;s call it your certificate which will be used to sign an application.</description>
-    </item>
-    
-    <item>
-      <title>Debugging iOS apps on jailbroken iPhone</title>
-      <link>https://xdaemonx.github.io/debugging/</link>
-      <pubDate>Fri, 03 Jul 2020 13:44:28 +0200</pubDate>
-      
-      <guid>https://xdaemonx.github.io/debugging/</guid>
-      <description>The first time I have tried to debug iOS apps on my jailbroken iPhone I hit the wall. There were many issues I had to solve so in this short post I&amp;rsquo;m gonna try to help you with this. Since you came to this post, I believe you already know what is lldb so I won&amp;rsquo;t talk about it and let&amp;rsquo;s get straight to the point.
-Prerequisites:
- Jailbroken iPhone (mine is iPhone 11, 13.</description>
     </item>
     
   </channel>

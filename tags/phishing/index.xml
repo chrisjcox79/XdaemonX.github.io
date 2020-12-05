@@ -16,7 +16,10 @@
       <pubDate>Thu, 08 Oct 2020 14:54:09 +0200</pubDate>
       
       <guid>https://xdaemonx.github.io/lateralus/</guid>
-      <description></description>
+      <description>Introduction Let&amp;rsquo;s first start by giving description of Modlishka and lateralus.
+Modlishka Modlishka is basically a reverse proxy which can be used to bypass 2FA, collect credentials and generally is helpful for phishing campaigns.
+It has a lot of options, such as:
+ Injecting custom javascript code (can be useful to rewrite parts of page) Substitutions of strings Credentials collection Domain mode hijacking  Here I will show only some parts of it, you should download it and give it a try.</description>
     </item>
     
   </channel>

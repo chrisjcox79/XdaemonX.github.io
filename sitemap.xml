@@ -4,7 +4,37 @@
   
   <url>
     <loc>https://xdaemonx.github.io/</loc>
-    <lastmod>2020-10-08T14:54:09+02:00</lastmod>
+    <lastmod>2020-12-05T22:31:11+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://xdaemonx.github.io/tags/frida/</loc>
+    <lastmod>2020-12-05T22:31:11+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://xdaemonx.github.io/frida_patching/</loc>
+    <lastmod>2020-12-05T22:31:11+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://xdaemonx.github.io/tags/ios/</loc>
+    <lastmod>2020-12-05T22:31:11+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://xdaemonx.github.io/tags/iphone/</loc>
+    <lastmod>2020-12-05T22:31:11+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://xdaemonx.github.io/post/</loc>
+    <lastmod>2020-12-05T22:31:11+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://xdaemonx.github.io/tags/</loc>
+    <lastmod>2020-12-05T22:31:11+01:00</lastmod>
   </url>
   
   <url>
@@ -19,16 +49,6 @@
   
   <url>
     <loc>https://xdaemonx.github.io/tags/phishing/</loc>
-    <lastmod>2020-10-08T14:54:09+02:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://xdaemonx.github.io/post/</loc>
-    <lastmod>2020-10-08T14:54:09+02:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://xdaemonx.github.io/tags/</loc>
     <lastmod>2020-10-08T14:54:09+02:00</lastmod>
   </url>
   
@@ -89,11 +109,6 @@
   
   <url>
     <loc>https://xdaemonx.github.io/tags/debugserver/</loc>
-    <lastmod>2020-07-03T13:44:28+02:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://xdaemonx.github.io/tags/iphone/</loc>
     <lastmod>2020-07-03T13:44:28+02:00</lastmod>
   </url>
   
