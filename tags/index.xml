@@ -5,24 +5,33 @@
     <link>https://xdaemonx.github.io/tags/</link>
     <description>Recent content in Tags on del0rean blog</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Sat, 05 Dec 2020 22:31:11 +0100</lastBuildDate>
+    <lastBuildDate>Wed, 09 Dec 2020 19:31:28 +0100</lastBuildDate>
     
 	<atom:link href="https://xdaemonx.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>frida</title>
-      <link>https://xdaemonx.github.io/tags/frida/</link>
-      <pubDate>Sat, 05 Dec 2020 22:31:11 +0100</pubDate>
+      <title>code injection</title>
+      <link>https://xdaemonx.github.io/tags/code-injection/</link>
+      <pubDate>Wed, 09 Dec 2020 19:31:28 +0100</pubDate>
       
-      <guid>https://xdaemonx.github.io/tags/frida/</guid>
+      <guid>https://xdaemonx.github.io/tags/code-injection/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>dylib</title>
+      <link>https://xdaemonx.github.io/tags/dylib/</link>
+      <pubDate>Wed, 09 Dec 2020 19:31:28 +0100</pubDate>
+      
+      <guid>https://xdaemonx.github.io/tags/dylib/</guid>
       <description></description>
     </item>
     
     <item>
       <title>ios</title>
       <link>https://xdaemonx.github.io/tags/ios/</link>
-      <pubDate>Sat, 05 Dec 2020 22:31:11 +0100</pubDate>
+      <pubDate>Wed, 09 Dec 2020 19:31:28 +0100</pubDate>
       
       <guid>https://xdaemonx.github.io/tags/ios/</guid>
       <description></description>
@@ -31,9 +40,18 @@
     <item>
       <title>iPhone</title>
       <link>https://xdaemonx.github.io/tags/iphone/</link>
-      <pubDate>Sat, 05 Dec 2020 22:31:11 +0100</pubDate>
+      <pubDate>Wed, 09 Dec 2020 19:31:28 +0100</pubDate>
       
       <guid>https://xdaemonx.github.io/tags/iphone/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>frida</title>
+      <link>https://xdaemonx.github.io/tags/frida/</link>
+      <pubDate>Sat, 05 Dec 2020 22:31:11 +0100</pubDate>
+      
+      <guid>https://xdaemonx.github.io/tags/frida/</guid>
       <description></description>
     </item>
     
