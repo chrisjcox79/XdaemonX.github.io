@@ -128,8 +128,8 @@ Dec  9 22:36:20 WillGetHacked[4272] &lt;Notice&gt;: ECHO View loaded
 Dec  9 22:36:20 WillGetHacked[4272] &lt;Notice&gt;: ECHO I am from the app
 </code></pre><h2 id="details-about-dynamic-library">Details about dynamic library</h2>
 <p>For our dynamic library, we have simple interface with one instance method in it. That is the method that will replace <em>whoami</em> method from interface <em>TestClass</em>.</p>
-<p>testDylib.h file:</p>
-<pre><code>@interface testDylib : NSObject
+<p>Haxor.h file:</p>
+<pre><code>@interface Haxor : NSObject
 - (void)replace;
 @end
 </code></pre><p>Implementation of this interface is where the real fun is. Let&rsquo;s take a look at the code.</p>
@@ -176,7 +176,7 @@ Method originalMethod = class_getInstanceMethod(toReplaceClass, selOriginal);
 </code></pre><p>This is the last step, we are setting implementation of -[TestClass whoami] to be the same as -[Haxor replace].</p>
 <h2 id="creating-ipa-and-installing-it">Creating ipa and installing it</h2>
 <p>The process is similar to the one we did last time.</p>
-<p>Since testDylib is a static library (.a extension), we will first convert it to dynamic library (dylib) so we can inject it the same way we did with out FridaGadget.dylib.</p>
+<p>Since Haxor is a static library (.a extension), we will first convert it to dynamic library (dylib) so we can inject it the same way we did with out FridaGadget.dylib.</p>
 <p>My library is called libHaxor.a, so to convert it to dylib we use:</p>
 <p><code>$ xcrun --sdk iphoneos clang -arch arm64 -shared -all_load -o Haxor.dylib libHaxor.a</code>.</p>
 <p>Make sure to replace <code>-arch</code> parameter with the architecture of your device.</p>
