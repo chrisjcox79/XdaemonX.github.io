@@ -169,7 +169,7 @@ SEL selOriginal = @selector(whoami);
 </code></pre><p>We are creating selector variables of methods we are gonna substitute.</p>
 <pre><code>Method replaceMethod = class_getInstanceMethod(thisClass, selReplace);
 Method originalMethod = class_getInstanceMethod(toReplaceClass, selOriginal);
-</code></pre><p><code>class_getInstanceMethod</code> returns to us Method object of instance methods which we want. <code>repMethod</code> will basically have -[Haxor replace] as a Method object, while <code>toReplace</code> will have -[TestClass whoami].</p>
+</code></pre><p><code>class_getInstanceMethod</code> returns to us Method object of instance methods which we want. <code>replaceMethod</code> will basically have -[Haxor replace] as a Method object, while <code>originalMethod</code> will have -[TestClass whoami].</p>
 <pre><code>IMP impReplace = method_getImplementation(replaceMethod);
 </code></pre><p><code>impReplace</code> will have implementation of replaceMethod, or -[Haxor replace].</p>
 <pre><code>method_setImplementation(originalMethod, impReplace);
